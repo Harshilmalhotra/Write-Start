@@ -79,7 +79,7 @@ async function makeOpenAICall(prompt) {
   try {
     const fileText = fs.readFileSync('scraped_text.txt', 'utf8');
     const payload = {
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo", // Use the GPT-3.5-turbo model
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         { role: "user", content: `${prompt}\n\nFile content:\n${fileText}` }

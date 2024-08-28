@@ -74,6 +74,7 @@ process.on('SIGINT', () => {
   process.exit();
 });
 
+// Chat gpt configuration
 async function makeOpenAICall(prompt) {
   try {
     const fileText = fs.readFileSync('scraped_text.txt', 'utf8');
